@@ -1,0 +1,5 @@
+Resume_UI/UX
+
+1. UX (User Experience) merupakan perasaan penggunaan ketika mereka menggunakan suatu produk.  Untuk menciptakan UX yang baik ada beberapa langkah untuk berpikir desain dari UX yaitu Empathize (mendengar permasalahan dari keluhan), define (menentukan kebutuhan prioritas), ideate (membuat sketsa dan task flow), prototype (membuat prototype), dan validate (memvalidasi hasil prototype)
+2. User Interface (UI) merupakan visual yang digunakan oleh pengguna untuk berinteraksi saat menggunakan produk. Untuk membuat UI yang baik, terdiri atas 4 pillar, yaitu itu: konsisten menggunakan desain yang sama, mempertahankan desain yang simpel, menggunakan tulisan yang mudah dibara., dan memohon bantuan ini untuk melakukan evluasi. 
+3. untuk membuat UX/UI yang baik, perlu membuat prototype yang dikenal dengan simulasi dari produk akhir. Ada 3 pillar supaya prototype sukses, yaitu: representation, Precision., dan interactivity.
