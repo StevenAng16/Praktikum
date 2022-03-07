@@ -1,7 +1,7 @@
 Bootstrap
 
 1. Bootstrap merupakan sebuah library framework CSS yang telah buat khusus untuk mengembangkan front end sebuah website
-2.  Class Bootstrap ada 4:
+2.  Class Bootstrap  terdiri atas  4, yaitu
     Container untuk menampung, atau menaruh sesuatu
     Row untuk membuat baris
     Column untuk membuat kolom
