@@ -1,0 +1,28 @@
+.home {
+    font-family: 'Gill Sans';
+    text-align: center;
+    background-color: silver;
+    background-image: url(../../img/bg-img.png);
+}
+
+.contact {
+    font-family: 'Gill Sans';
+    text-align: center;
+    background-color: silver;
+   
+}
+
+.login {
+    font-family: 'Gill Sans';
+    text-align: center;
+    background-color: silver;
+    background-image: url(../../img/bg-img.png);
+}
+
+.test {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-sosmed {}
