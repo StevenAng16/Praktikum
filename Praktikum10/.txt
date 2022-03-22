@@ -1,0 +1,8 @@
+
+users={mockUsers}
+
+<div className={styles.test}>
+            <div className={styles.completed} alt={"completed"}>{}
+            <p><s>{user.title}</s></p>
+            </div>
+        </div>
