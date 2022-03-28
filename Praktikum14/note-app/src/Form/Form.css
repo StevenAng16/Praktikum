@@ -1,0 +1,54 @@
+.form {
+    text-align: center;
+}
+
+button, input[type=submit] {
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-style: solid;
+}
+
+button:hover, input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.buttonSubmit, input[type=submit] {
+    margin-right: 10px;
+    background: green;
+    border-color: green;
+    color: white;
+}
+
+.buttonSubmit:hover, input[type=submit]:hover {
+    background: transparent;
+    color:  green;
+}
+
+.buttonReset, button[type=reset] {
+    background: red;
+    background-color: red;
+    color: white;
+}
+
+.buttonReset:hover, button[type=reset]:hover {
+    background: transparent;
+    color: red;
+}
+
+.errorMassage, button[type=reset]:hover {
+    color: red;
+}
+
+.errorEmail, button[type=reset]:hover {
+    color: red;
+}
+
+.errornoHandphone, button[type=reset]:hover {
+    color: red;
+}
+
+span {
+    color:  red;
+}
