@@ -1,4 +1,13 @@
+h1 {
+    padding: 30px 20px;
+    background-color: teal;
+    color: snow;
+}
+
 .form {
+    padding: 10px 20px 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: turquoise;
     text-align: center;
 }
 
