@@ -20,7 +20,6 @@ export default function Form (){
     const [errornoHandphone, setErrornoHandphone] = useState("")
     const regex = /^[A-Za-z ]*$/
     const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    const fotoSuratKesungguhan = useRef(null)
     const handleInput = e => {
         const name = e.target.name;
         const value = e.target.value;
@@ -72,25 +71,30 @@ export default function Form (){
 
     return(
         <>
-        <div style={{"marginBottom":"30px"}}>
+        <div className='form'>
             <h1 style={{"text-align":"center"}}>Pendaftaran Peserta Coding Bootcamp</h1>
             <br/><br/>
-                <form className="form" onSubmit={handleSubmit}>
-                    <label>Nama Lengkap :</label><br/>
-                    <input
-                        type="text"
-                        name="nama"
-                        required
-                        onChange={handleInput}
-                        value={data.nama || ""}
-                        className={styles.input}
-                        size={50}
-                    /><br/><br/>
+                <form onSubmit={handleSubmit}>
+                    <div className='mb-3'>
+                        <label for="exampleFormNama" className='form-label'>Nama Lengkap :</label><br/>
+                        <input
+                            type="text"
+                            name="nama"
+                            required
+                            onChange={handleInput}
+                            value={data.nama || ""}
+                            className={styles.input}
+                            class="form-control"
+                            size={50}
+                        /><br/><br/>
+                    </div>
+                    
                     <label>Email :</label><br/>
                     <input
                         type="email"
                         name="email"
                         required
+                        placeholder="name@example.com"
                         onChange={handleInput}
                         value={data.email || ""}
                         className={styles.input}
@@ -101,12 +105,13 @@ export default function Form (){
                         type="number"
                         name="noHandphone"
                         required
+                        placeholder='12345678910112'
                         onChange={handleInput}
                         value={data.noHandphone || ""}
-                        refs={fotoSuratKesungguhan}
+                        className={styles.input}
                         size={50}
                     /><br/><br/>
-                    <label>Latar Belakang Pendidikan</label><br/>
+                    <label>Latar Belakang Pendidikan :</label><br/>
                     <div>
                         <input required type="radio" id="" name="fav_language" value="IT"/>
                         <label>IT</label><br/>
@@ -117,12 +122,12 @@ export default function Form (){
                     <input
                         type="file"
                         refs={suratKesungguhan}
-                        className={styles.input}
                         size={50}
                     /><br/><br/>
                     <label>Harapan untuk Coding Bootcamp ini :</label><br/>
                     <textarea
                         rows="10" cols="30"
+                        placeholder='Tulis pesan yang disampaikan'
                         size={50}
                     /><br/><br/>
                     <span className={styles.errorMassage}>{errorMassage}</span><br/>
