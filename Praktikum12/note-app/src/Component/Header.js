@@ -1,7 +1,9 @@
+import './Header.module.css'
+
 const Header = () => {
     return(
         <>
-            <h1 style={{color:"teal"}}>todos</h1>
+            <h1 style={{'font-size': 100}}>todos</h1>
         </>
     );
 }
