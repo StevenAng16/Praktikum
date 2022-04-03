@@ -2,7 +2,7 @@
 import ListItem from './ListItem'
 import './list.css'
 
-const ListChat = (props) => {
+const ListJudul = (props) => {
     const {data, hapusJudul} = props
 
     return (
@@ -24,4 +24,4 @@ const ListChat = (props) => {
     )
 }
 
-export default ListChat
+export default ListJudul
