@@ -25,7 +25,9 @@ function App() {
 */
 
 function App() {
-  <Home />
+  return (
+    <Home />
+  )
 }
 
 export default App;
