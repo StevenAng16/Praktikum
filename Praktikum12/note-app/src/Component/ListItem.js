@@ -1,9 +1,13 @@
 const ListItem = ({item, hapusJudul}) => {
     return (
+        
         <tr>
-            <td>{item.title}</td>
+            <td><p>{item.title}</p></td>
             <td>
-                <button onClick={() => {hapusJudul(item.id)}}>Delete</button>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" onClick={() => {hapusJudul(item.id)}}>Delete</button>
             </td>
         </tr>
     )
