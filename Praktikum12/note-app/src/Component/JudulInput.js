@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class PassengerInput extends Component{
+class JudulInput extends Component{
     state = {
         title: "",
         editing: true
@@ -76,4 +76,4 @@ class PassengerInput extends Component{
     }
 }
 
-export default PassengerInput
+export default JudulInput
