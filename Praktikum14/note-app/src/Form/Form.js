@@ -71,8 +71,12 @@ export default function Form (){
 
     return(
         <>
+        {/* <!-- CSS only --> */}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+        {/* <!-- JavaScript Bundle with Popper --> */}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"/>
         <div className='form'>
-            <h1 style={{"text-align":"center"}}>Pendaftaran Peserta Coding Bootcamp</h1>
+            <h1 style={{"text-align":"center"}} className='display-5'>Pendaftaran Peserta Coding Bootcamp</h1>
             <br/><br/>
                 <form onSubmit={handleSubmit}>
                     <div className='mb-3'>
@@ -98,6 +102,7 @@ export default function Form (){
                         onChange={handleInput}
                         value={data.email || ""}
                         className={styles.input}
+                        class="form-control"
                         size={50}
                     /><br/><br/>
                     <label>No Handphone :</label><br/>
@@ -109,32 +114,36 @@ export default function Form (){
                         onChange={handleInput}
                         value={data.noHandphone || ""}
                         className={styles.input}
+                        class="form-control"
                         size={50}
                     /><br/><br/>
                     <label>Latar Belakang Pendidikan :</label><br/>
                     <div>
-                        <input required type="radio" id="" name="fav_language" value="IT"/>
-                        <label>IT</label><br/>
-                        <input required type="radio" id="" name="fav_language" value="NonIT"/>
+                        <input required type="radio" class="form-check-input" id="" name="fav_language" value="IT"/>
+                        <label>IT</label>
+                        <> </>
+                        <input required type="radio" class="form-check-input" id="" name="fav_language" value="NonIT"/>
                         <label>NonIT</label>
                     </div><br/><br/>
                     <label>Foto Surat Kesungguhan :</label><br/>
                     <input
                         type="file"
                         refs={suratKesungguhan}
+                        class="form-control"
                         size={50}
                     /><br/><br/>
                     <label>Harapan untuk Coding Bootcamp ini :</label><br/>
                     <textarea
                         rows="10" cols="30"
                         placeholder='Tulis pesan yang disampaikan'
+                        class="form-control"
                         size={50}
                     /><br/><br/>
                     <span className={styles.errorMassage}>{errorMassage}</span><br/>
                     <span className={styles.errorEmail}>{errorEmail}</span><br/>
-                    <span className={styles.errornoHandphone}>{errornoHandphone}</span><br/><br/>
-                    <input type="submit" value="Submit" />
-                    <button type="reset" onClick={resetData}>Reset</button>
+                    <span className={styles.errornoHandphone}>{errornoHandphone}</span><br/>
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                    <button type="reset" class="btn btn-danger" onClick={resetData}>Reset</button>
                 </form>
         </div>
         </>

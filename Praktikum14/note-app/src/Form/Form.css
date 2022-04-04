@@ -35,7 +35,7 @@ button:hover, input[type=submit]:hover {
     color:  green;
 }
 
-.buttonReset, button[type=reset] {
+.buttonReset {
     background: red;
     background-color: red;
     color: white;
@@ -46,15 +46,15 @@ button:hover, input[type=submit]:hover {
     color: red;
 }
 
-.errorMassage, button[type=reset]:hover {
+.errorMassage{
     color: red;
 }
 
-.errorEmail, button[type=reset]:hover {
+.errorEmail{
     color: red;
 }
 
-.errornoHandphone, button[type=reset]:hover {
+.errornoHandphone{
     color: red;
 }
 
