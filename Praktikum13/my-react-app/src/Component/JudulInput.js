@@ -1,32 +1,39 @@
 import { useState } from 'react';
-//import {Col, Container, Row} from 'react-bootstrap'
+import "./Header.module.css"
 
-
-function PassengerInput (props) {
+function JudulInput (props) {
     const [data, setData] = useState ({
         title: ""})
         const [editing, setEditing] = useState(true)
 
-    const onChange = e => {
+    const onChange = (e) => {
         setData({...data,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formIsNotEmpty = this.state.title
+        const formIsNotEmpty = data.title
         if (formIsNotEmpty){
             const newData = { 
-                title: this.state.title
+                title: data.title
             }
-            this.props.tambahJudul(newData);
-            this.setState({
-                title: ""
+            props.tambahJudul(newData);
+            setData({
+                title: "",
             })
         } else {
             alert("Data masih ada yang kosong")
         }
+    }
+
+    const handleBukaInput = () => {
+        setEditing(false)
+    }
+
+    const handleTutupInput = () => {
+        setEditing(true)
     }
 
     let viewMode = {};
@@ -41,32 +48,29 @@ function PassengerInput (props) {
 
         return (
         <>
-            <div class="" className='list-todo'>
-                {/* <Container>
-                    <Row>
-                        <Col></Col>
-                    </Row>
-                </Container> */}
-                <div class="container">
-                <div class="row">
-                    <div class="col">
-                    Column
-                    </div>
-                    <div class="col">
-                    Column
-                    </div>
-                </div>
-                </div>
-                <div className="left-side">
-                    <input onChange={onChange} value={this.state.title} type="text" name="title" placeholder="Add todo..." />
-                </div>
-                <div className="right-side">
-                    <button onClick={handleSubmit} style={{marginLeft: '20px'}}>Submit</button>
-                </div>
+            {/* <!-- CSS only --> */}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+            {/* <!-- JavaScript Bundle with Popper --> */}
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"/>
+            <div class="App">
+            <div onSubmit={handleSubmit} style={viewMode}> 
+                    <h3 className='list'>Masukkan Judul Anda</h3>
+                <input 
+                    type="text" 
+                    className='input-text'
+                    placeholder="Input Title..."  
+                    value={data.title} 
+                    name="title" 
+                    onChange={onChange}
+                />
+                <button type="button" class="btn btn-success" onClick={handleSubmit} style={{marginLeft: "10px"}}>Submit</button>
+                <button type="button" class="btn btn-secondary" onClick={handleTutupInput} style={{marginLeft: "10px"}}>Selesai</button>
             </div>
+            <button type="button" class="btn btn-info" onClick={handleBukaInput} style={editMode}>Masukan nama Penumpang</button>
+        </div>
         </>    
         )
     }
 
 
-export default PassengerInput
+export default JudulInput
