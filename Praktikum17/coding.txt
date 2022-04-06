@@ -1,0 +1,13 @@
+
+npm install --global surge
+surge
+
+
+// To install the CLI, pop open your terminal and install with npm.
+npm install netlify-cli -g
+
+// To get a list of commands, run:
+netlify help
+
+// To get a list of available sub-commands, arguments, and flags, run:
+netlify [command] help
